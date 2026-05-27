@@ -1,0 +1,128 @@
+/* ================= HEADER ================= */
+
+.header{
+
+    width:100%;
+
+    padding:25px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#fff;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    z-index:1000;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* LOGO */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+
+    width:55px;
+}
+
+.logo h2{
+
+    font-size:28px;
+    color:#111827;
+    font-weight:600;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.navbar a{
+
+    text-decoration:none;
+    color:#111827;
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+.navbar a:hover{
+
+    color:#ff4d4d;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown{
+
+    position:relative;
+}
+
+.dropdown-content{
+
+    position:absolute;
+
+    top:35px;
+    left:0;
+
+    min-width:220px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(10px);
+
+    transition:0.3s;
+
+    z-index:999;
+}
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:14px 18px;
+
+    border-bottom:1px solid #f1f1f1;
+}
+
+.dropdown-content a:hover{
+
+    background:#ff4d4d;
+    color:#fff;
+}
+
+.dropdown:hover .dropdown-content{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translateY(0);
+}
+
+/* ================= HERO SECTION ================= */

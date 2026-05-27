@@ -1,0 +1,208 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.about-section{
+    width: 100%;
+    padding: 80px 8%;
+}
+
+.about-container{
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2{
+    font-size: 38px;
+    color: #111827;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #4b5563;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   COMPANY PROFILE
+========================= */
+
+.company-profile{
+    margin-bottom: 80px;
+}
+
+/* =========================
+   CEO SECTION
+========================= */
+
+.ceo-section{
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.ceo-section img{
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+}
+
+.ceo-section h3{
+    font-size: 40px;
+    margin-top: 20px;
+    color: #0f172a;
+}
+
+.ceo-section h4{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #1e293b;
+}
+
+.ceo-section p{
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* =========================
+   VISION + FINANCIAL
+========================= */
+
+.vision-section,
+.financial-section{
+    margin-bottom: 80px;
+}
+
+/* =========================
+   SAFETY SECTION
+========================= */
+
+.safety-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.safety-content{
+    flex: 1;
+}
+
+.safety-content ul{
+    list-style: none;
+}
+
+.safety-content ul li{
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4b5563;
+}
+
+/* CHECK ICON */
+
+.safety-content ul li::before{
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #111827;
+    font-weight: bold;
+}
+
+/* IMAGE */
+
+.safety-image{
+    flex: 1;
+}
+
+.safety-image img{
+    width: 100%;
+    max-width: 550px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 992px){
+
+    .safety-section{
+        flex-direction: column;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .ceo-section h3{
+        font-size: 32px;
+    }
+
+    .ceo-section h4{
+        font-size: 24px;
+    }
+
+    .ceo-section p{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 576px){
+
+    .about-section{
+        padding: 60px 5%;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    .ceo-section h3{
+        font-size: 28px;
+    }
+
+    .ceo-section h4{
+        font-size: 22px;
+    }
+
+    .ceo-section p{
+        font-size: 18px;
+    }
+
+    .safety-content ul li{
+        font-size: 16px;
+    }
+}

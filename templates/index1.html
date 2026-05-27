@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AA Metal Scrap</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+           
+
+            <h2>MUBA EXPORTS</h2>
+
+        </div>
+
+        <!-- NAVBAR -->
+
+        <nav class="navbar">
+
+           
+
+            <a href="/about">About</a>
+
+            <!-- DROPDOWN -->
+
+            <div class="dropdown">
+
+                <a href="#" class="dropbtn">
+                    Products ▾
+                </a>
+
+                <div class="dropdown-content">
+
+                    <a href="/ferrous">
+                        Ferrous Scrap
+                    </a>
+
+                    <a href="/nonferrous">
+                        Non Ferrous Scrap
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="/achievements">
+                Our Achievements
+            </a>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO SLIDER ================= -->
+
+    <section class="hero-slider">
+
+        <!-- SLIDE 1 -->
+
+        <div class="slide active">
+
+            <img src="/static/images/one.jpg" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+
+                <h1>
+                    Buy & Sell <br>
+                    Ferrous Scrap
+                </h1>
+
+                <p>
+                    Global leader in reusable metal recycling
+                </p>
+
+                <a href="#" class="hero-btn">
+                    Explore More
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- SLIDE 2 -->
+
+        <div class="slide">
+
+            <img src="/static/images/two.jpg" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+
+                <h1>
+                    Non Ferrous <br>
+                    Metal Recycling
+                </h1>
+
+                <p>
+                    Sustainable recycling solutions worldwide
+                </p>
+
+                <a href="#" class="hero-btn">
+                    View Products
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- SLIDE 3 -->
+
+        <div class="slide">
+
+            <img src="/static/images/three.jpg" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="content">
+
+                <h1>
+                    Trusted Scrap <br>
+                    Trading Company
+                </h1>
+
+                <p>
+                    Import & export services across the globe
+                </p>
+
+                <a href="#" class="hero-btn">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="slider-buttons">
+
+            <button id="prev">❮</button>
+
+            <button id="next">❯</button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PRODUCTS SECTION ================= -->
+
+    <section class="products-section">
+
+        <span class="product-subtitle">
+            Buy & Sell
+        </span>
+
+        <h2 class="product-title">
+            Products
+        </h2>
+
+        <div class="products-container">
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <img src="/static/images/one.jpg" alt="">
+
+          
+
+            </div>
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <img src="/static/images/two.jpg" alt="">
+
+               
+
+            </div>
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <img src="/static/images/three.jpg" alt="">
+
+                
+
+            </div>
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <img src="/static/images/four.jpg" alt="">
+
+              
+
+            </div>
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product-card">
+
+                <img src="/static/images/five.jpg" alt="">
+
+           
+
+            </div>
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product-card">
+
+                <img src="/static/images/one.jpg" alt="">
+
+                
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <script>
+
+        const slides = document.querySelectorAll(".slide");
+
+        const next = document.getElementById("next");
+
+        const prev = document.getElementById("prev");
+
+        let index = 0;
+
+        function showSlide(i) {
+
+            slides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            slides[i].classList.add("active");
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            showSlide(index);
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            showSlide(index);
+
+        });
+
+        // AUTO SLIDE
+
+        setInterval(() => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            showSlide(index);
+
+        }, 5000);
+
+    </script>
+
+</body>
+
+</html>

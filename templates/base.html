@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AA Metal Scrap</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/hero.css">
+    <link rel="stylesheet" href="/static/css/product.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/company-detail.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    {% block header %}{% endblock header %}
+    {% block hero %}{% endblock hero %}
+     {% block products %}{% endblock products %}
+
+     {% block conpany_detail %}{% endblock conpany_detail %}
+
+     {% block footer %}{% endblock footer %}
+
+
+
+
+
+
+
+        <script>
+
+        const slides = document.querySelectorAll(".slide");
+
+        const next = document.getElementById("next");
+
+        const prev = document.getElementById("prev");
+
+        let index = 0;
+
+        function showSlide(i) {
+
+            slides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            slides[i].classList.add("active");
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            showSlide(index);
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            showSlide(index);
+
+        });
+
+        // AUTO SLIDE
+
+        setInterval(() => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            showSlide(index);
+
+        }, 5000);
+
+    </script>
+
+</body>
+
+</html>
