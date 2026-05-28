@@ -1,57 +1,107 @@
- <!-- ================= HEADER ================= -->
+<!-- ================= HEADER ================= -->
 
-    <header class="header">
+<header class="header">
 
-        <!-- LOGO -->
+    <!-- LOGO -->
 
-        <div class="logo">
+    <div class="logo">
 
-           
+        <h2 style="padding-top:20px">THAI METALS RECYCLING LTD</h2>
 
-            <h2>MUBA EXPORTS</h2>
+    </div>
 
-        </div>
+    <!-- MOBILE MENU BUTTON -->
 
-        <!-- NAVBAR -->
+    <button class="menu-toggle" id="menu-toggle">
 
-        <nav class="navbar">
+        ☰
 
-           
+    </button>
 
-            <a href="/">About</a>
+    <!-- NAVBAR -->
 
-            <!-- DROPDOWN -->
+    <nav class="navbar" id="navbar">
 
-            <div class="dropdown">
+        <a href="/">About</a>
 
-                <a href="#" class="dropbtn">
-                    Products ▾
+        <!-- DROPDOWN -->
+
+        <div class="dropdown" id="dropdown">
+
+            <button class="dropbtn" id="dropbtn">
+
+                Products ▾
+
+            </button>
+
+            <div class="dropdown-content" id="dropdown-content">
+
+                <a href="/ferrous">
+
+                    Ferrous Scrap
+
                 </a>
 
-                <div class="dropdown-content">
+                <a href="/nonferrous">
 
-                    <a href="/ferrous">
-                        Ferrous Scrap
-                    </a>
+                    Non Ferrous Scrap
 
-                    <a href="/nonferrous">
-                        Non Ferrous Scrap
-                    </a>
-
-                </div>
+                </a>
 
             </div>
 
-            <a href="/achievements">
-                Our Achievements
-            </a>
+        </div>
 
-            <a href="/contact">
-                Contact
-            </a>
+        <a href="/achievements">
 
-        </nav>
+            Our Achievements
 
-    </header>
+        </a>
 
-    <!-- ================= HERO SLIDER ================= -->
+        <a href="/contact">
+
+            Contact
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuToggle = document.getElementById("menu-toggle");
+
+    const navbar = document.getElementById("navbar");
+
+    const dropdown = document.getElementById("dropdown");
+
+    const dropbtn = document.getElementById("dropbtn");
+
+    /* MOBILE MENU */
+
+    menuToggle.addEventListener("click", () => {
+
+        navbar.classList.toggle("active");
+
+    });
+
+    /* MOBILE DROPDOWN */
+
+    dropbtn.addEventListener("click", (e) => {
+
+        if(window.innerWidth <= 900){
+
+            e.preventDefault();
+
+            dropdown.classList.toggle("active");
+
+        }
+
+    });
+
+});
+</script>

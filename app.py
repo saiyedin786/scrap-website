@@ -14,7 +14,7 @@ def ferrous_scrap():
 def nonferrous_scrap():
     return render_template("nonferrous.html")
 
-@app.route("/our-achievements")
+@app.route("/achievements")
 def achievements():
     return render_template("achievements.html")
 
